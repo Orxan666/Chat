@@ -1,0 +1,67 @@
+#mini-chat {
+    position: fixed;
+    right: 35px;
+    bottom: 30px;
+    i {
+        padding: 25px;
+        background-color: darkblue;
+        color: white;
+        font-size: 20px;
+        border-radius: 50%;
+    }
+}
+#chat {
+    position: fixed;
+    right: 30px;
+    bottom: 110px;
+    border: 1px solid rgb(41, 0, 117);
+    border-top-left-radius: 35px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+transition: 0.5s ease-in-out;
+    &.active {
+        opacity: 0;
+        transform: translateY(30px);
+        visibility: hidden;
+    }
+
+    width: 350px;
+    header {
+        background-color: darkblue;
+        padding: 15px;
+        color: white;
+        font-weight: bold;
+        border-top-left-radius: 35px;
+    }
+    main {
+        overflow-y: scroll;
+        height: 300px;
+        .message {
+            position: relative;
+            margin: 25px;
+            border-radius: 15px;
+
+            &.admin {
+                background-color: darkblue;
+                color: white;
+                padding: 10px;
+                float: left;
+                width: 51%;
+            }
+            &.user {
+                background-color: rgb(130, 130, 190);
+                color: rgb(0, 0, 0);
+                padding: 10px;
+                float: right;
+                width: 51%;
+            }
+            .time {
+                position: absolute;
+                top: 100%;
+                right: 15px;
+                color: grey;
+            }
+        }
+    }
+}
